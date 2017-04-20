@@ -7,10 +7,24 @@
 	<body>
 		<h1>Display message</h1>
 		<p>Display results on the console</p>
+		
+		First name:<br>
+			<input type="text" name="firstname" id="firstname">
+		<br>
+		Last name:<br>
+			<input type="text" name="lastname" id="lastname">
+		<br>
+		<input type="button" value="Send" onclick="DisplayConsol()">
+			<div id="here"></div>
 
 		<script>
 			// display your name, surname on the console
-			// ...
+			function DisplayConsol() {
+				var first = document.getElementById("firstname").value;
+				var second = document.getElementById("lastname").value;
+
+				document.getElementById("here").innerHTML = first+" "+second;
+			}
 			
 			// display your name and surname in a popup window
 			// ...
